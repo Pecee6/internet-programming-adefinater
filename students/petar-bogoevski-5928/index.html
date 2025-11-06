@@ -28,13 +28,43 @@
                     <option value="nominee">Nominees only</option>
                 </select>
             </div>
+            <!-- Enhanced Filters -->
+            <div class="filter-group">
+                <label for="decadeFilter">Decade:</label>
+                <select id="decadeFilter">
+                    <option value="all">All decades</option>
+                    <!-- Populated by JavaScript -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="authorFilter">Author:</label>
+                <select id="authorFilter">
+                    <option value="all">All authors</option>
+                    <!-- Populated by JavaScript -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="genreFilter">Primary Genre:</label>
+                <select id="genreFilter">
+                    <option value="all">All genres</option>
+                    <!-- Populated by JavaScript -->
+                </select>
+            </div>
         </div>
     </div>
 
-    <!-- ✅ Added -->
     <div class="results-info">
         <p id="resultsCount">Showing 0 books</p>
-        <button id="clearFilters" class="filter-clear-btn">Clear Filters</button>
+        <div class="action-buttons">
+            <button id="clearFilters" class="filter-clear-btn">Clear Filters</button>
+            <button id="exportCsv" class="export-btn">Export CSV</button>
+            <button id="toggleGrouping" class="group-btn">Group by Genre</button>
+        </div>
+    </div>
+
+    <!-- Sort Indicators -->
+    <div id="sortIndicators" class="sort-indicators">
+        <!-- Multi-column sort indicators will appear here -->
     </div>
 
     <p id="noResults" class="no-results hidden">No books match your filters.</p>
